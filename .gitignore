@@ -1,6 +1,12 @@
 .venv/
-data/
+temp_data/
+data/video/*
+data/audio/*
+data/res/*
 ffmpeg/
 __pycache__/
 test.py
 *.pyc
+*.mp3
+*.mp4
+*.srt
