@@ -1,6 +1,8 @@
 UPLOADED_VIDEO_FILE_DIR = './data/video/'
 TMP_AUDIO_FILE = './data/audio/tmp.mp3'
 RES_TXT_PATH = './data/res/'
+WHISPER_LANG = 'ru'
+WHISPER_MODEL = 'base'
 
 
 

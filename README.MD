@@ -5,6 +5,9 @@ Install:
     * ./data/audio 
     * ./data/video
     * ./data/res
+* check settings.settings.py for:
+    * WHISPER_LANG (default 'ru')
+    * WHISPER_MODEL (default 'base')
 
 
 Run app:

@@ -48,7 +48,7 @@ def extract_mp3_from_video(input_file: str, output_file: str, ffmpeg_bin='ffmpeg
     stream = ffmpeg.output(stream, output_file, **ffmpeg_args)
     ffmpeg.run(stream, cmd=ffmpeg_bin)
 
-def transcribe_audio(audio_file: str, model='base'):
+def transcribe_audio(audio_file: str, model=settings.WHISPER_MODEL):
     """Получить массив текста из аудиофайла
 
     Args:
@@ -58,7 +58,7 @@ def transcribe_audio(audio_file: str, model='base'):
     # whisper.DecodingOptions(language='rus')
 
     model = whisper.load_model(model)
-    result = model.transcribe(audio_file, language='ru')
+    result = model.transcribe(audio_file, language=settings.WHISPER_LANG)
 
     return result
 
@@ -137,6 +137,8 @@ def create_res_zip(video_file_name: str):
         os.remove(file)
 
 def download_res_zip(video_file_name: str):
+    """Реализация функционала скачивания архива с результатом в Streamlit
+    """
     if os.path.exists(f'{settings.RES_TXT_PATH}{video_file_name}.zip'):
         f_name = f'{settings.RES_TXT_PATH}{video_file_name}.zip'
         with open(f_name, 'rb') as file:
