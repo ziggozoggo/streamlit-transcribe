@@ -11,4 +11,6 @@ Install:
 
 
 Run app:
-streamlit run streamlit_whisper.py --server.port 8000
+```
+$ streamlit run streamlit_whisper.py --server.port 8000
+```
