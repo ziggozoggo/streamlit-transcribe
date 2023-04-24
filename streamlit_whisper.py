@@ -3,9 +3,15 @@ import os
 from utils import utils
 from settings import settings
 
-# streamlit run streamlit_whisper.py --server.port 8000
+# streamlit run streamlit_whisper.py --server.port 8000 --server.maxUploadSize 20
+# streamlit run your_script.py --server.maxUploadSize 200
 st.title("Транскрибирование видео (RU)")
 st.markdown(settings.HIDE_MENU, unsafe_allow_html=True)
+
+if os.path.exists(settings.VIDEO_SAMPLE):
+    utils.download_sample('sample.mp4')
+
+
 
 # Flags 
 # for download buttons

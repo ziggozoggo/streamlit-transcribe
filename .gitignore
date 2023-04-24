@@ -5,7 +5,7 @@ data/audio/*
 data/res/*
 ffmpeg/
 __pycache__/
-test.py
+test*.py
 *.pyc
 *.mp3
 *.mp4

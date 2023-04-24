@@ -168,3 +168,14 @@ def download_res_files(video_file_name: str):
             data=file,
             file_name=f'{video_file_name}.txt'
         )
+
+def download_sample(video_file_name: str):
+    """Реализация функционала скачивания примера видео-файла;
+    """
+    f_name = settings.VIDEO_SAMPLE
+    with open(f_name, 'rb') as file:
+        st.download_button(
+            label='Скачать пример',
+            data=file,
+            file_name=f'{video_file_name}'
+        )
