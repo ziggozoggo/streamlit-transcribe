@@ -11,8 +11,6 @@ st.markdown(settings.HIDE_MENU, unsafe_allow_html=True)
 if os.path.exists(settings.VIDEO_SAMPLE):
     utils.download_sample('sample.mp4')
 
-
-
 # Flags 
 # for download buttons
 download_files_exists = False
